@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "record_schema_version": 1,
+  "updated_at": "2026-11-01",
+  "max_pack_size_bytes": 52428800,
+  "coverage": {
+    "description": "Curated bootstrap examples only. These records demonstrate the contract and are not a representative sample or a census of machine-learning literature.",
+    "year_min": 1959,
+    "year_max": 2025,
+    "not_exhaustive": true,
+    "sources": [
+      "openalex",
+      "arxiv"
+    ]
+  },
+  "packs": [
+    {
+      "id": "ml-foundations-1959",
+      "topic_id": "ml-foundations",
+      "year_from": 1959,
+      "year_to": 1959,
+      "source_set": [
+        "openalex"
+      ],
+      "record_schema_version": 1,
+      "generated_at": "2026-11-01T00:00:00Z",
+      "record_count": 1,
+      "size_bytes": 338,
+      "sha256": "100621f95c6a7fbcd2c29bda99d2f88a212bcc10eedd19cbe7237b47aa90fab9",
+      "path": "ml-foundations-1959.jsonl.gz",
+      "url": "https://raw.githubusercontent.com/Jastxz/ml-literature-index/main/index/packs/ml-foundations-1959.jsonl.gz"
+    },
+    {
+      "id": "nlp-2017",
+      "topic_id": "nlp",
+      "year_from": 2017,
+      "year_to": 2017,
+      "source_set": [
+        "arxiv"
+      ],
+      "record_schema_version": 1,
+      "generated_at": "2026-11-01T00:00:00Z",
+      "record_count": 1,
+      "size_bytes": 1052,
+      "sha256": "654cb6e41532821d5432641bbf4a335611fc4ccabfc4098feef7aed591969cfb",
+      "path": "nlp-2017.jsonl.gz",
+      "url": "https://raw.githubusercontent.com/Jastxz/ml-literature-index/main/index/packs/nlp-2017.jsonl.gz"
+    },
+    {
+      "id": "llm-reasoning-2025",
+      "topic_id": "reasoning",
+      "year_from": 2025,
+      "year_to": 2025,
+      "source_set": [
+        "arxiv"
+      ],
+      "record_schema_version": 1,
+      "generated_at": "2026-11-01T00:00:00Z",
+      "record_count": 1,
+      "size_bytes": 1104,
+      "sha256": "36197c0d32a63d747ec8198750b436486c96afeec689143b7d6fb18ceda0f2fc",
+      "path": "llm-reasoning-2025.jsonl.gz",
+      "url": "https://raw.githubusercontent.com/Jastxz/ml-literature-index/main/index/packs/llm-reasoning-2025.jsonl.gz"
+    }
+  ]
+}

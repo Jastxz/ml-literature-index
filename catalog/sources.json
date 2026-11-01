@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-11-01",
+  "providers": [
+    {
+      "id": "openalex",
+      "name": "OpenAlex",
+      "role": "Broad scholarly metadata and discovery",
+      "homepage_url": "https://openalex.org/",
+      "api_base_url": "https://api.openalex.org",
+      "works_endpoint": "https://api.openalex.org/works",
+      "documentation_url": "https://help.openalex.org/api/",
+      "terms_url": "https://help.openalex.org/data/how-its-built/",
+      "metadata_license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "abstract_policy": "OpenAlex states all returned data is CC0. Include only abstracts returned by OpenAlex, and keep this provider and retrieval date in the record.",
+      "access_notes": "Basic queries work without a key. A key raises the budget and is needed for cursor paging beyond the first page. Each agent supplies its own key; never commit it."
+    },
+    {
+      "id": "arxiv",
+      "name": "arXiv",
+      "role": "Preprint metadata, abstracts, and links to paper versions",
+      "homepage_url": "https://arxiv.org/",
+      "api_base_url": "https://export.arxiv.org/api/",
+      "query_endpoint": "https://export.arxiv.org/api/query",
+      "documentation_url": "https://info.arxiv.org/help/api/user-manual.html",
+      "terms_url": "https://info.arxiv.org/help/api/tou.html",
+      "metadata_license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "abstract_policy": "arXiv terms explicitly allow redistribution of descriptive metadata, including abstracts, under CC0. Store only metadata, and cite the arXiv record.",
+      "full_text_policy": "Article content has rights-holder-specific terms. The standard arXiv non-exclusive distribution license is not permission for this repository to redistribute full text. Follow the license shown on each paper.",
+      "rate_limit": "For legacy APIs, no more than one request every three seconds and one connection at a time across the user's machines."
+    }
+  ]
+}

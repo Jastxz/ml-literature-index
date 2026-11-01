@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "taxonomy_version": "1.0.0",
+  "topics": [
+    {
+      "id": "ml-foundations",
+      "label": "Machine learning foundations and history",
+      "aliases": [
+        "machine learning history",
+        "ml history",
+        "classical machine learning",
+        "foundations of machine learning"
+      ]
+    },
+    {
+      "id": "supervised-learning",
+      "label": "Supervised learning",
+      "aliases": [
+        "classification",
+        "regression",
+        "supervised machine learning"
+      ]
+    },
+    {
+      "id": "unsupervised-learning",
+      "label": "Unsupervised learning",
+      "aliases": [
+        "clustering",
+        "representation discovery"
+      ]
+    },
+    {
+      "id": "deep-learning",
+      "label": "Deep learning",
+      "aliases": [
+        "neural networks",
+        "deep neural networks",
+        "representation learning"
+      ]
+    },
+    {
+      "id": "reinforcement-learning",
+      "label": "Reinforcement learning",
+      "aliases": [
+        "rl",
+        "policy learning",
+        "reward learning"
+      ]
+    },
+    {
+      "id": "nlp",
+      "label": "Natural language processing",
+      "aliases": [
+        "natural language processing",
+        "computational linguistics",
+        "language technology"
+      ]
+    },
+    {
+      "id": "computer-vision",
+      "label": "Computer vision",
+      "aliases": [
+        "vision",
+        "image recognition",
+        "visual recognition"
+      ]
+    },
+    {
+      "id": "large-language-models",
+      "label": "Large language models",
+      "aliases": [
+        "llm",
+        "large language models",
+        "foundation language models"
+      ]
+    },
+    {
+      "id": "reasoning",
+      "label": "Reasoning and planning",
+      "aliases": [
+        "reasoning models",
+        "mathematical reasoning",
+        "chain-of-thought"
+      ]
+    },
+    {
+      "id": "optimization",
+      "label": "Optimization for machine learning",
+      "aliases": [
+        "optimization",
+        "stochastic optimization",
+        "training algorithms"
+      ]
+    }
+  ]
+}

@@ -1,27 +1,43 @@
 # ML Literature Index
 
-An agent-first source map and optional metadata packs for discovering machine-learning papers, from historical work to recent research.
-
-The repository is intended to be cloned by an AI agent. It provides instructions, provider pointers, and compact topic/year indexes that lead to original paper resources. The agent uses its own reasoning and web or API access.
+A small, agent-first index for finding machine-learning papers and reaching their original records. Clone it, let your agent read AGENTS.md, and load only the metadata pack needed for the current topic and year.
 
 ## Use
 
-1. Clone this repository and have the agent read AGENTS.md.
-2. Read SPEC.md for the data contract, evidence rules, and coverage limits.
-3. When packs are published, select only the topic/year pack needed for the task from index/manifest.json.
-4. Follow the record links to the provider and original paper. Full text is accessed at its source when available and permitted.
+1. Clone this repository.
+2. Have the agent read AGENTS.md and SPEC.md.
+3. Select a topic/year pack in index/manifest.json.
+4. Download only that pack, verify its SHA-256, and inspect its JSONL records.
+5. Follow the DOI or provider record to verify the paper. Use the abstract or full text at the source only as its terms allow.
+6. Cite the DOI, arXiv ID, or provider record and label whether the evidence came from metadata, an abstract, or full text read at the source.
 
-## What this repository contains
+Validate a clone with:
 
-- Agent instructions and machine-readable source/topic catalogs.
-- Optional compressed metadata packs published by topic and year.
-- Links and provenance needed to verify citations.
+    python3 scripts/validate_index.py --manifest index/manifest.json --packs-dir index/packs
+    python3 -m unittest discover -s tests -v
 
-It does not contain PDFs, paper full text, embeddings, an MCP server, a backend, or a web application. The consuming agent needs network access to reach external providers and papers.
+## What it contains
+
+- Agent instructions and source access/rights notes.
+- A stable topic taxonomy with aliases.
+- A versioned record schema and manifest.
+- Three tiny gzip JSONL bootstrap packs spanning 1959, 2017, and 2025.
+- A Python standard-library validator.
+
+The packs contain bibliographic metadata and arXiv abstracts whose descriptive metadata terms permit redistribution. They contain no PDF files or article full text. The sample only proves the data format and citation path; it does not indicate coverage.
+
+## Network and provider use
+
+A clone works offline for its local packs and validation. Finding newer or unindexed papers needs network access through the consuming agent.
+
+OpenAlex supports basic queries without a key; a provider key raises quotas and is needed for cursor paging beyond the first page. arXiv provides a metadata API and permits descriptive metadata reuse under CC0. Its legacy API limit is one request every three seconds, with one connection at a time. Do not place credentials in this repository.
+
+See catalog/sources.json for official provider docs and terms. See SPEC.md for scope, refresh plans, data contract, and coverage limits.
 
 ## Project status
 
-Specification and agent instructions are published. Source catalogs, index packs, and the validator are not available yet; see SPEC.md before contributing them.
+Alpha bootstrap. The records are a hand-checked sample, not a comprehensive corpus and not an automated monthly update pipeline. Wider coverage and repeatable pack refresh are planned follow-up work.
 
-Coverage will be reported by source and year. This project does not claim to index every ML paper ever published.
-removed=0 replaced=0 len 1466->1466
+## Boundary
+
+This repository is an index, not a paper archive or a chatbot. It has no model runtime, backend, web app, or MCP server. Read papers at their original sources and honor their individual licenses.
